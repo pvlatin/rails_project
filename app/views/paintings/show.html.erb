@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @painting.name %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @painting.image %>
+</p>
+
+<p>
+  <strong>Remote image url:</strong>
+  <%= @painting.remote_image_url %>
+</p>
+<p>
+  <%= link_to "Add a Painting", new_painting_path(:gallery_id => @gallery) %> |
+  <%= link_to "Remove Gallery", @gallery, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View Galleries", galleries_path %> |
+</p> 
